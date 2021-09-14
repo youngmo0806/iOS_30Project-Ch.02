@@ -27,7 +27,6 @@ class ViewController: UIViewController, LEDChangeDelegate {
         }
     }
     
-    
     func transData(text: String?, textColor: UIColor, background: UIColor) {
             
         if let title = text {
