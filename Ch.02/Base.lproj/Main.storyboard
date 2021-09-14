@@ -53,6 +53,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textLabel" destination="l9b-ig-0WQ" id="ZDv-Cf-phD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +64,7 @@
         <!--설정-->
         <scene sceneID="Vk7-X3-5j7">
             <objects>
-                <viewController id="gZe-ct-Snh" sceneMemberID="viewController">
+                <viewController id="gZe-ct-Snh" customClass="SettingViewController" customModule="Ch_02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TIi-Ub-w3f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,19 +99,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ECd-Re-phW">
-                                        <rect key="frame" x="0.0" y="35.5" width="310" height="32"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="148" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fk-L6-Gyx">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="32"/>
-                                                <state key="normal" title="Button" image="black_circle.png"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <state key="normal" image="black_circle.png"/>
+                                                <connections>
+                                                    <action selector="tapBackgroundColorChangeBtn:" destination="gZe-ct-Snh" eventType="touchUpInside" id="ivx-Qd-KND"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5h-1p-iYY">
-                                                <rect key="frame" x="112" y="0.0" width="86" height="32"/>
-                                                <state key="normal" title="Button" image="orange_circle"/>
+                                                <rect key="frame" x="58" y="0.0" width="32" height="32"/>
+                                                <state key="normal" image="orange_circle"/>
+                                                <connections>
+                                                    <action selector="tapBackgroundColorChangeBtn:" destination="gZe-ct-Snh" eventType="touchUpInside" id="3sr-aW-Yr8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-fa-ot3">
-                                                <rect key="frame" x="224" y="0.0" width="86" height="32"/>
-                                                <state key="normal" title="Button" image="blue_circle"/>
+                                                <rect key="frame" x="116" y="0.0" width="32" height="32"/>
+                                                <state key="normal" image="blue_circle"/>
+                                                <connections>
+                                                    <action selector="tapBackgroundColorChangeBtn:" destination="gZe-ct-Snh" eventType="touchUpInside" id="usJ-2j-JD4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -124,27 +136,39 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="KAh-qC-7fP">
-                                        <rect key="frame" x="0.0" y="35.5" width="310" height="32"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="148" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-dO-82N">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="32"/>
-                                                <state key="normal" title="Button" image="yellow_circle"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <state key="normal" image="yellow_circle"/>
+                                                <connections>
+                                                    <action selector="tapTextColorChangeBtn:" destination="gZe-ct-Snh" eventType="touchUpInside" id="IuF-xS-09B"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apm-O2-mZ7">
-                                                <rect key="frame" x="112" y="0.0" width="86" height="32"/>
-                                                <state key="normal" title="Button" image="purple_circle"/>
+                                                <rect key="frame" x="58" y="0.0" width="32" height="32"/>
+                                                <state key="normal" image="purple_circle"/>
+                                                <connections>
+                                                    <action selector="tapTextColorChangeBtn:" destination="gZe-ct-Snh" eventType="touchUpInside" id="4Kf-f7-UV9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn2-lH-y2r">
-                                                <rect key="frame" x="224" y="0.0" width="86" height="32"/>
-                                                <state key="normal" title="Button" image="green_circle"/>
+                                                <rect key="frame" x="116" y="0.0" width="32" height="32"/>
+                                                <state key="normal" image="green_circle"/>
+                                                <connections>
+                                                    <action selector="tapTextColorChangeBtn:" destination="gZe-ct-Snh" eventType="touchUpInside" id="zzC-SC-WAe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egW-RR-Rsk">
-                                <rect key="frame" x="192" y="401.5" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egW-RR-Rsk">
+                                <rect key="frame" x="169" y="466" width="46" height="30"/>
                                 <state key="normal" title="저장"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="gZe-ct-Snh" eventType="touchUpInside" id="roz-xb-qWR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uvq-IP-EdM"/>
@@ -164,6 +188,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="nyS-FU-Ca0"/>
+                    <connections>
+                        <outlet property="blackButton" destination="7Fk-L6-Gyx" id="yCw-cM-2EL"/>
+                        <outlet property="blueButton" destination="WG0-fa-ot3" id="HlL-SA-CFy"/>
+                        <outlet property="greenButton" destination="zn2-lH-y2r" id="9kI-TD-jRN"/>
+                        <outlet property="orangeButton" destination="k5h-1p-iYY" id="f5E-dK-oFq"/>
+                        <outlet property="purpleButton" destination="Apm-O2-mZ7" id="Rvb-gR-k6d"/>
+                        <outlet property="titleText" destination="pkU-nC-KoK" id="KcX-cf-WjX"/>
+                        <outlet property="yellowButton" destination="YNM-dO-82N" id="v4o-oe-hmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1to-ab-z2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
