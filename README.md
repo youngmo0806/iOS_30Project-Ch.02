@@ -1,2 +1,3 @@
 # Swift 30Project
-## Ch.02-LED전광판 앱
+## Part2. Basic
+### Ch.02-LED전광판 앱
